@@ -1,0 +1,70 @@
+body{
+    background-color: pink;
+    text-align: center;
+    font-family: sans-serif;
+}
+div#wrapper{
+    margin: 20px;
+    background-color: pink;
+}
+div#fotos{
+    width: 1800px;
+    height: 900px;
+    border:solid black 1px;
+    margin: auto;
+}
+div.picture-holder{
+    border: solid black 2px;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    float: left;
+    background-image: url("img/thinkyboy.jpg");
+}
+div#speler1 {
+    float: left;
+    width: 400px;
+    height: 247px;
+    background-color: lightblue;
+    margin-left: 23px;
+    border: solid black 3px;
+    padding-bottom: -8px;
+}
+
+div#speler2 {
+    float: right;
+    width: 400px;
+    height: 247px;
+    background-color: red;
+    margin-right: 22px;
+    border: solid black 3px;
+}
+div#top{
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+div#knop{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background-color: purple;
+    border: solid black 3px;
+}
+div#beurten{
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    background-color: pink;
+}
+img#malossi{
+    height: 120px;
+    width: 120px;
+}
+img#polini{
+    height: 120px;
+    width: 120px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose ya monke</title>
+    <link href="https://fonts.googleapis.com/css?family=Copse" rel='stylesheet'>
+    <style>
+
+        body {
+            font-family: 'Copse', serif;
+            text-align:center;
+        }
+        div.monkepicture {
+            height: 450px;
+            box-sizing: border-box;
+            width: 300px;
+            float:left;
+            background-color: red;
+            border:solid 1px black;
+        }
+
+        #pics {
+            width: 900px;
+            height:1350px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1> monke</h1>
+    <h3> Choose your monkee</h3>
+<div id="pics">
+
+</div>
+<script>
+    pics = document.getElementById("pics");
+    createPicsHolders();
+
+   function createPicsHolders(){
+       for(var i = 0; i < 9; i++)
+       {
+           pictureHolder = document.createElement("div");
+           pictureHolder.className = "monkepicture";
+           pictureHolder.id = "picture-holder-" + i;
+           pics.appendChild(pictureHolder);
+       }
+   }
+</script>
+</body>
+</html>

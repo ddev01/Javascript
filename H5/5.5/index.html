@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose ya monke</title>
+    <link href="https://fonts.googleapis.com/css?family=Copse" rel='stylesheet'>
+    <style>
+
+        body {
+            font-family: 'Copse', serif;
+            text-align:center;
+        }
+        div.picture-holder {
+            height: 450px;
+            box-sizing: border-box;
+            width: 300px;
+            float:left;
+            background-color: white;
+            border:solid 1px black;
+        }
+
+        #pics {
+            width: 900px;
+            height:1350px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin:auto;
+        }
+
+        div.favoriet{
+            width:300px;
+            height: 150px;
+            background-color: blue;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> monkeChooser</h1>
+    <h3> Choose your monke</h3>
+<div id="pics">
+
+</div>
+<script>
+    pics = document.getElementById("pics");
+    createPicsHolders();
+    createmonkeImages();
+
+   function createPicsHolders(){
+       for(var i = 0; i < 9; i++)
+       {
+           pictureHolder = document.createElement("div");
+           pictureHolder.className = "picture-holder";
+           pictureHolder.id = "picture-holder-" + i;
+           pics.appendChild(pictureHolder);
+       }
+   }
+
+   function createmonkeImages(){
+        pictureHolder = document.getElementsByClassName("picture-holder");
+        for(var i = 0; i< pictureHolder.length; i++){
+            favoriet = document.createElement("div");
+            favoriet.className = 'favoriet';
+            favoriet.id = "favoriet_"+ (i+1);
+            monkePlaatje = document.createElement("img");
+            monkePlaatje.src = 'img/monke' + (i+1) + '.jpg';
+            monkePlaatje.id = (i+1);
+            monkePlaatje.addEventListener("click", function(){
+                maakFavoriet(this.id);
+            });
+            pictureHolder[i].appendChild(favoriet);
+            pictureHolder[i].appendChild(monkePlaatje);
+        }
+    }
+
+    function maakFavoriet(id) {
+       console.log("Maak mij Favoriet Het gaat om aap --> " + id );
+       favoriet = document.getElementById("favoriet_" + id);
+       favoriet.style.backgroundImage = "url('img/hearth.png')";
+    }
+</script>
+</body>
+</html>
